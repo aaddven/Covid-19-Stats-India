@@ -1,0 +1,132 @@
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/bgBottom">
+
+
+        <TextView
+            android:id="@+id/newC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="New Cases :"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/newR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="New Recovered :"
+            android:textColor="#4CAF50"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/newD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newC" />
+
+        <TextView
+            android:id="@+id/newD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:layout_marginStart="15dp"
+            android:text="New Deaths :"
+            android:textColor="#F44336"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/noNC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/newR"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newC" />
+
+        <TextView
+            android:id="@+id/noNR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/newD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newR" />
+
+        <TextView
+            android:id="@+id/noND"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newD" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="98dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginStart="134dp"
+            android:layout_marginTop="21dp"
+            android:text="Data of :"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/newC"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="199dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="10dp"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/newR"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>
+
+
+
+

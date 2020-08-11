@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="grey">#8A9090</color>
+
+    <color name="white">#fff</color>
+
+    <color name="black">#000</color>
+
+    <color name="bgBottom">#343A37</color>
+
+
+    <color name="blueHTTPLink">#41BBEC</color>
+
+
+</resources>

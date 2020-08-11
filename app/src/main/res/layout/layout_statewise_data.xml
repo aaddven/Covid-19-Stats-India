@@ -1,0 +1,139 @@
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stateWiseDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/bgBottom">
+
+        <TextView
+            android:id="@+id/stateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif-monospace"
+            android:text='" State "'
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cases"
+            android:layout_width="86dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="68dp"
+            android:text="Cases :"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recovered"
+            android:layout_width="134dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Recovered :"
+            android:textColor="#C4EF5C"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/deaths"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cases" />
+
+        <TextView
+            android:id="@+id/deaths"
+            android:layout_width="94dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Deaths :"
+            android:textColor="#F44336"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noR"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/noC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/recovered"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cases" />
+
+        <TextView
+            android:id="@+id/noR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/deaths"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recovered" />
+
+        <TextView
+            android:id="@+id/noD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deaths" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="151dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="31dp"
+            android:text="Last Updated by Server :"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/cases"
+            app:layout_constraintTop_toBottomOf="@+id/stateTextView" />
+
+        <TextView
+            android:id="@+id/updatedTextVIew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            android:text="Click on Refresh"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/recovered"
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>
+
+
+
+
