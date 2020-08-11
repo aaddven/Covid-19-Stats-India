@@ -17,6 +17,7 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -53,29 +54,7 @@ public class MainActivity extends AppCompatActivity{
 
     String d ; // date as a string
 
-    Handler handler = new Handler();
-
-    DownloadTask task =  new DownloadTask();;
-
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-
-            synchronized (this){
-
-                task.execute("https://api.covid19india.org/data.json");
-
-
-                }
-
-            }
-
-
-    };
-
-    Thread threadDownloadTask = new Thread(runnable);
-
-
+    DownloadTask task;
 
     /*---------------------------------------------------------------------------
                               Downloads Data
@@ -101,14 +80,23 @@ public class MainActivity extends AppCompatActivity{
 
                 InputStreamReader reader = new InputStreamReader(in);
 
-                int data = reader.read();
+                BufferedReader inB = new BufferedReader(reader);
 
-                while (data != -1){
+                String inputLine;
 
-                    char current = (char) data ;
-                    result += current;
-                    data = reader.read();
-                }
+                while ((inputLine = inB.readLine()) != null)
+                    result+=inputLine;
+
+                in.close();
+
+                int data;
+
+                //while (data = reader.read()!= -1){
+
+                 //   char current = (char) data ;
+                 //   result += current;
+                 //   data = reader.read();
+                //}
 
                 return result;
 
@@ -239,7 +227,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
 
                 Toast.makeText(MainActivity.this,"Clicked : Please Wait ! Accessing Data", Toast.LENGTH_LONG).show();
-
+                task =  new DownloadTask();
 
                 totalCases.setText("Updating...");
                 totalRecovered.setText("Updating...");
@@ -251,9 +239,9 @@ public class MainActivity extends AppCompatActivity{
 
                 // Downloads Data
 
-                // task.execute("https://api.covid19india.org/data.json");
+                task.execute("https://api.covid19india.org/data.json");
 
-                threadDownloadTask.start(); // Use thread.start() if u will use thread.run() that will run in same main thread
+                //threadDownloadTask.start(); // Use thread.start() if u will use thread.run() that will run in same main thread
 
             }
         });
