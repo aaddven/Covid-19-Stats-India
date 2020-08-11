@@ -13,6 +13,8 @@
   * Future Updates :
     
     * Fixing the crash.
+    
+    * Adding search bar in state activity to find states easily from the list.
   
     * Use SQlite/Shared Preferences to save last downloaded data.
     
