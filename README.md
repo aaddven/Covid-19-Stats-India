@@ -2,6 +2,8 @@
 
   Developed using Android Studio [ JAVA ]
   
+  API Used : [Covid 19-India API](https://api.covid19india.org/data.json)
+  
   **It's track Covid-19 Stats of India also shows data Statewise**
   
   
