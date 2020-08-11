@@ -8,15 +8,11 @@
   
   * Problems :
   
-    * App crashes when refresh is clicked for second time.
-  
-    * Downlaoding data takes almost 40-50 seconds.
+    * App crashes when try to open state activity without executing task.
     
   * Future Updates :
     
     * Fixing the crash.
-  
-    * Optimize json processing.
   
     * Use SQlite/Shared Preferences to save last downloaded data.
     
