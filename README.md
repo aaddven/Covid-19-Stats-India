@@ -13,6 +13,8 @@
     * Downlaoding data takes almost 40-50 seconds.
     
   * Future Updates :
+    
+    * Fixing the crash.
   
     * Optimize json processing.
   
