@@ -1,6 +1,6 @@
 # Covid-19-Stats-India 
 
-  Developed using Android Studio
+  Developed using Android Studio [ JAVA ]
   
   **It's track Covid-19 Stats of India also shows data Statewise**
   
