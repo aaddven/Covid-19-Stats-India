@@ -33,25 +33,7 @@
 
         <include layout="@layout/layout_centre_home"/>
 
-        <TextView
-            android:layout_width="81dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:layout_marginStart="230dp"
-            android:hint="(Refresh)"
-            android:textSize="18sp">
-
-        </TextView>
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/ref"
-            android:layout_marginTop="150dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/ic_refresh">
-
-        </ImageView>
+        
 
     </RelativeLayout>
 
@@ -94,61 +76,49 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+     <RelativeLayout
         android:id="@+id/rel7"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:layout_below="@id/rel6">
 
+        <ImageView
+            android:id="@+id/ref"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/ic_refresh"
+            android:visibility="visible">
+
+        </ImageView>
+
+
+
         <TextView
             android:layout_width="120dp"
             android:layout_height="25dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="60dp"
             android:text="Developed by"
-            android:textSize="18sp">
+            android:textSize="13sp">
 
         </TextView>
 
         <TextView
-            android:layout_width="120dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/blueHTTPLink"
-            android:text="Randhir Kumar"
             android:id="@+id/gitHubLink"
-            android:textSize="18sp">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-            android:text="Data from this"
-            android:textSize="18sp">
-
-        </TextView>
-
-        <TextView
             android:layout_width="120dp"
             android:layout_height="25dp"
             android:layout_marginStart="200dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
+            android:text="Randhir Kumar"
             android:textColor="@color/blueHTTPLink"
-            android:text="Link"
-            android:id="@+id/dataLink"
-            android:textSize="18sp">
+            android:textSize="13sp">
 
         </TextView>
-
-
 
 
     </RelativeLayout>
-
 
 
 
