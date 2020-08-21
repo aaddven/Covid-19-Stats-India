@@ -10,16 +10,9 @@
   
     * App crashes when try to open state activity without executing task.
     
-  * Future Updates :
+  * Pasting few images :
     
-    * Fixing the crash.
-    
-    * Adding search bar in state activity to find states easily from the list.
-  
-    * Use SQlite/Shared Preferences to save last downloaded data.
-    
-    * Adding Increase/Decrease symbol to show if cases are more/less than that of yesterday's.
-    
+    ![alt text](https://ibb.co/s17Ng0H)
   
   
   
