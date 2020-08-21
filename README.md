@@ -10,9 +10,6 @@
   
     * App crashes when try to open state activity without executing task.
     
-  * Pasting few images :
-    
-    ![alt text](https://ibb.co/s17Ng0H)
   
   
   
