@@ -6,13 +6,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -46,13 +47,15 @@ public class MainActivity extends AppCompatActivity{
     ArrayList<String> mUpdateTime = new ArrayList<>();
 
     TextView gitHubLink ;
-    TextView dataLink;
+
 
     String tC ,tR ,tD ; // total numbers as a string
 
     String nC ,nR , nD ; // new numbers as a string
 
     String d ; // date as a string
+
+
 
     DownloadTask task;
 
@@ -93,9 +96,9 @@ public class MainActivity extends AppCompatActivity{
 
                 //while (data = reader.read()!= -1){
 
-                 //   char current = (char) data ;
-                 //   result += current;
-                 //   data = reader.read();
+                //   char current = (char) data ;
+                //   result += current;
+                //   data = reader.read();
                 //}
 
                 return result;
@@ -131,30 +134,30 @@ public class MainActivity extends AppCompatActivity{
 
                 JSONObject jsonPart1 = arr.getJSONObject(0); // Index 0 has Total cases data in "statewise" array
 
-                    Log.i("Total Cases",jsonPart1.getString("confirmed"));
-                    Log.i("Total Recovered",jsonPart1.getString("recovered"));
-                    Log.i("Total Deaths",jsonPart1.getString("deaths"));
+                Log.i("Total Cases",jsonPart1.getString("confirmed"));
+                Log.i("Total Recovered",jsonPart1.getString("recovered"));
+                Log.i("Total Deaths",jsonPart1.getString("deaths"));
 
-                    // Converting json object to string
+                // Converting json object to string
 
-                    tC = jsonPart1.getString("confirmed");
-                    tR = jsonPart1.getString("recovered");
-                    tD = jsonPart1.getString("deaths") ;
+                tC = jsonPart1.getString("confirmed");
+                tR = jsonPart1.getString("recovered");
+                tD = jsonPart1.getString("deaths") ;
 
 
                 JSONObject jsonPart2 = arr2.getJSONObject(arr2.length()-1); // This is the last index of "case_time_series" array and last index has data of latest day .
 
-                    Log.i("New Cases",jsonPart2.getString("dailyconfirmed"));
-                    Log.i("New Recovered",jsonPart2.getString("dailyrecovered"));
-                    Log.i("New Deaths",jsonPart2.getString("dailydeceased"));
-                    Log.i("Date",jsonPart2.getString("date"));
+                Log.i("New Cases",jsonPart2.getString("dailyconfirmed"));
+                Log.i("New Recovered",jsonPart2.getString("dailyrecovered"));
+                Log.i("New Deaths",jsonPart2.getString("dailydeceased"));
+                Log.i("Date",jsonPart2.getString("date"));
 
-                    // Converting json object to string
+                // Converting json object to string
 
-                    nC = jsonPart2.getString("dailyconfirmed");
-                    nR = jsonPart2.getString("dailyrecovered");
-                    nD = jsonPart2.getString("dailydeceased") ;
-                    d = jsonPart2.getString("date");
+                nC = jsonPart2.getString("dailyconfirmed");
+                nR = jsonPart2.getString("dailyrecovered");
+                nD = jsonPart2.getString("dailydeceased") ;
+                d = jsonPart2.getString("date");
 
                 /*------- Storing Statewise Data in Arrays ----------------*/
 
@@ -190,6 +193,8 @@ public class MainActivity extends AppCompatActivity{
 
                 Toast.makeText(getApplicationContext(),"Done !",Toast.LENGTH_LONG).show();
 
+
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -206,7 +211,7 @@ public class MainActivity extends AppCompatActivity{
 
         allStates = findViewById(R.id.button_allStates);
 
-        refresh = findViewById(R.id.ref);
+        refresh = (ImageView) findViewById(R.id.ref);
 
         totalCases = findViewById(R.id.noTC);
         totalRecovered = findViewById(R.id.noTR);
@@ -216,10 +221,9 @@ public class MainActivity extends AppCompatActivity{
         newDeaths = findViewById(R.id.noND);
         date = findViewById(R.id.dateTextView);
         gitHubLink = findViewById(R.id.gitHubLink);
-        dataLink = findViewById(R.id.dataLink);
 
 
-
+        refresh.setVisibility(View.VISIBLE);
         /*----------------- Refresh the data -------------------------------*/
 
         refresh.setOnClickListener(new View.OnClickListener() {
@@ -255,14 +259,8 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        // Json Data Link
 
-        dataLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://api.covid19india.org/data.json")));
-            }
-        });
+
 
         // Opens StateWise Data Activity
 
@@ -286,13 +284,10 @@ public class MainActivity extends AppCompatActivity{
                 }else {
                     Toast.makeText(getApplicationContext(),"Click on Refresh to Load Data",Toast.LENGTH_LONG).show();
                 }
-
             }
         });
 
     }
-
-
 
 
 

@@ -43,7 +43,7 @@ public class State extends AppCompatActivity {
      ArrayList<String> mDeaths = new ArrayList<>();
      ArrayList<String> mUpdateTime = new ArrayList<>();
 
-     final ArrayList<String> states = new ArrayList<>();
+     ArrayList<String> states = new ArrayList<>();
 
 
 
@@ -96,6 +96,8 @@ public class State extends AppCompatActivity {
         mDeaths = (ArrayList<String>) getIntent().getSerializableExtra("deaths") ;
         mUpdateTime = (ArrayList<String>) getIntent().getSerializableExtra("updateTime") ;
 
+        // states for list view
+        states = (ArrayList<String>) getIntent().getSerializableExtra("states") ;
 
 
         /* ---------------------------------------------------------------------------
@@ -103,7 +105,7 @@ public class State extends AppCompatActivity {
           (Doing Manually Because Downloading Data Takes Time and ListView Shows Up Very Late)
          -----------------------------------------------------------------------------*/
 
-        states.add("Maharashtra");
+      /*  states.add("Maharashtra");
         states.add("Tamil Nadu");
         states.add("Delhi (UT)");
         states.add("Karnataka");
@@ -137,7 +139,7 @@ public class State extends AppCompatActivity {
         states.add("Meghalaya");
         states.add("Sikkim");
         states.add("Mizoram");
-        states.add("Andaman and Nicobar Islands (UT)");
+        states.add("Andaman and Nicobar Islands (UT)"); */
 
 
         arrayAdapter = new ArrayAdapter<>(State.this, simple_list_item_1, states);
@@ -496,6 +498,22 @@ public class State extends AppCompatActivity {
                             totalRecovered.setText(mRecovered.get(34));
                             totalDeaths.setText(mDeaths.get(34));
                             updated.setText(mUpdateTime.get(34));
+                            break;
+
+                            case 35 :
+                            state.setText(mState.get(35));
+                            totalCases.setText(mCases.get(35));
+                            totalRecovered.setText(mRecovered.get(35));
+                            totalDeaths.setText(mDeaths.get(35));
+                            updated.setText(mUpdateTime.get(35));
+                            break;
+                            
+                            case 36 :
+                            state.setText(mState.get(36));
+                            totalCases.setText(mCases.get(36));
+                            totalRecovered.setText(mRecovered.get(36));
+                            totalDeaths.setText(mDeaths.get(36));
+                            updated.setText(mUpdateTime.get(36));
                             break;
 
                     }
